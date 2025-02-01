@@ -1,0 +1,12 @@
+The solution uses a combination of techniques to ensure correct rendering:
+
+1. **Using `flex-wrap: wrap;`:** This allows the items to wrap onto multiple lines if they don't fit within the container's width. This avoids the issue entirely by preventing overflow.
+2. **Setting `min-width` on container:** This guarantees that the container's width can accommodate all its contents even if the combined width of the items exceed the initial width.
+
+Here's the corrected CSS:
+
+.container {  display: flex;  justify-content: space-between;  flex-wrap: wrap; /* Allow items to wrap */  min-width: 300px; /* Ensures that container is sufficiently large*/ }
+
+.item {  width: 100px; }
+
+This ensures that the layout adapts correctly regardless of the item widths.
